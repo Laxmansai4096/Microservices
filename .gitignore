@@ -1,0 +1,19 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.venv
+env/
+venv/
+ENV/
+.python_packages/
+
+# Local configuration & credentials
+.env
+*.log
+
+# IDE settings
+.vscode/
+.idea/
