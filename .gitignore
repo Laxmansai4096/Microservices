@@ -1,19 +1,22 @@
-# Byte-compiled / optimized / DLL files
+# Ignore code execution folders and temporary files
+aca_demo/
+azure_functions_demo/
+service_bus_demo/
+acr_ai_demo/
+
+# Ignore Python scripts and virtual environments
+*.py
 __pycache__/
 *.py[cod]
-*$py.class
-
-# Environments
-.venv
-env/
+.venv/
 venv/
-ENV/
 .python_packages/
 
-# Local configuration & credentials
+# Ignore environment credentials and logs
 .env
+*.env
 *.log
 
-# IDE settings
+# Ignore IDE settings
 .vscode/
 .idea/
