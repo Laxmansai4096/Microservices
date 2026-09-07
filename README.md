@@ -1,37 +1,49 @@
-# 📘 Azure Microservices Master Handbook for AI Engineers
+# 📘 Azure Microservices & Agentic AI Master Handbook
 
-Welcome to the **Master Architecture & Real-World Reference Notes for Azure Microservices**. This repository is organized into dedicated microservice folders. Each folder contains:
+Welcome to the **Master Architecture, Infrastructure & Multi-Agent Reference Notes**. This repository is structured into dedicated microservice and AI capability folders. Each folder contains:
 1. **Master Notes File (`*_master_notes.md`)**: Comprehensive features, functionalities, pros & cons, and end-to-end Azure execution steps.
-2. **Real-World Demonstration File (`*_real_world_demo.md`)**: Intuitive analogies (restaurant carousels, automated sorting robots, food truck fleets) and high-scale 1,000+ request AI scenarios.
+2. **Real-World Demonstration File (`*_real_world_demo.md`)**: Real-world analogies (food trucks, parcel sorting robots, surgical teams) and high-scale 1,000+ request enterprise scenarios.
 
 ---
 
-## 🏛️ End-to-End Architecture Blueprint
+## 🏛️ End-to-End Enterprise Agentic Microservices Architecture
 
 ```
                                   +------------------------------------+
                                   |   Azure Container Registry (ACR)   |
                                   |   (Private AI Docker Images)       |
                                   +------------------------------------+
-                                                    |
-                                                    v Image Pull
+                                                    │
+                                                    ▼ Image Pull
 +------------------+      Publish Job    +------------------------------------+      KEDA Scale     +------------------------------------+
-|  Fast API / Web  | ------------------> |     Azure Service Bus Queue        | ------------------> |  Azure Container Apps (ACA) Pool   |
-|  (User Interface)| <--- 202 Accepted - |  (Rate Limit Buffer & DLQ Retry)   |                     |  (Parallel LLM & RAG Workers)      |
+|  Fast API / Web  | ──────────────────> |     Azure Service Bus Queue        | ──────────────────> |  Azure Container Apps (ACA) Pool   |
+|  (User Interface)| <─── 202 Accepted ─ |  (Rate Limit Buffer & DLQ Retry)   |                     |  (Parallel LLM & RAG Workers)      |
 +------------------+                     +------------------------------------+                     +------------------------------------+
-                                                    |                                                                 |
-                                                    v Event Trigger                                                   v API Call
+                                                    │                                                                 │
+                                                    ▼ Event Trigger                                                   ▼ Orchestration
                                          +------------------------------------+                             +------------------------------------+
-                                         |    Azure Functions (Serverless)    |                             |      Azure OpenAI / Vector DB      |
-                                         |  (Lightweight Pipelines / Cron)    |                             +------------------------------------+
-                                         +------------------------------------+
+                                         |    Azure Functions (Serverless)    |                             | 🤖 Azure AI Multi-Agent Team       |
+                                         |  (Lightweight Pipelines / Cron)    |                             | - Financial Agent + Code Sandbox   |
+                                         +------------------------------------+                             | - Compliance Agent + Azure Search  |
+                                                                                                            | - Human-in-the-Loop Approval Gate  |
+                                                                                                            +------------------------------------+
 ```
 
 ---
 
-## 📂 Microservice Folders & Master Navigation
+## 📂 Master Navigation Directory
 
-### 1. 🏛️ Azure Container Apps (ACA)
+### 1. 🤖 [Azure AI Agents & Multi-Agent Orchestration](azure_ai_agents/azure_ai_agents_master_notes.md)
+* 📖 **Master Notes**: [`azure_ai_agents/azure_ai_agents_master_notes.md`](azure_ai_agents/azure_ai_agents_master_notes.md)
+  * Tool Calling, ACA Dynamic Sessions (Code Sandbox), Swarm & Hierarchical Multi-Agent Orchestration, Human-in-the-Loop, Memory, Pros & Cons.
+* 💡 **Real-World Demonstration**: [`azure_ai_agents/azure_ai_agents_real_world_demo.md`](azure_ai_agents/azure_ai_agents_real_world_demo.md)
+  * *Analogy*: The Hospital Surgical Care Team 👨‍⚕️🩺
+  * *High-Scale Scenario*: 1,000 Concurrent Corporate Loan Applications Audited Autonomously with VP Approval Gate.
+* 🐍 **Runnable Pipeline Simulation**: [`azure_ai_agents/multi_agent_pipeline_demo.py`](azure_ai_agents/multi_agent_pipeline_demo.py)
+
+---
+
+### 2. 🏛️ [Azure Container Apps (ACA)](azure_container_apps/azure_container_apps_master_notes.md)
 * 📖 **Master Notes**: [`azure_container_apps/azure_container_apps_master_notes.md`](azure_container_apps/azure_container_apps_master_notes.md)
   * Scale-to-Zero, KEDA Autoscaling, Revision Management (A/B Testing), Dapr, Ingress & VNet, Pros & Cons, Azure CLI/Portal steps.
 * 💡 **Real-World Demonstration**: [`azure_container_apps/azure_container_apps_real_world_demo.md`](azure_container_apps/azure_container_apps_real_world_demo.md)
@@ -40,7 +52,7 @@ Welcome to the **Master Architecture & Real-World Reference Notes for Azure Micr
 
 ---
 
-### 2. ⚡ Azure Functions (Serverless FaaS)
+### 3. ⚡ [Azure Functions (Serverless FaaS)](azure_functions/azure_functions_master_notes.md)
 * 📖 **Master Notes**: [`azure_functions/azure_functions_master_notes.md`](azure_functions/azure_functions_master_notes.md)
   * Event Triggers (`BlobTrigger`, `ServiceBusTrigger`), Input/Output Bindings (`[CosmosDB]`), Premium Zero Cold-Start, Custom Containers, Pros & Cons, Azure CLI/Portal steps.
 * 💡 **Real-World Demonstration**: [`azure_functions/azure_functions_real_world_demo.md`](azure_functions/azure_functions_real_world_demo.md)
@@ -49,7 +61,7 @@ Welcome to the **Master Architecture & Real-World Reference Notes for Azure Micr
 
 ---
 
-### 3. 📬 Azure Service Bus (Enterprise Messaging)
+### 4. 📬 [Azure Service Bus (Enterprise Messaging)](azure_service_bus/azure_service_bus_master_notes.md)
 * 📖 **Master Notes**: [`azure_service_bus/azure_service_bus_master_notes.md`](azure_service_bus/azure_service_bus_master_notes.md)
   * Rate-Limit Buffering (OpenAI HTTP 429 quota protection), Peek-Lock delivery, Dead-Letter Queue (DLQ), Pub/Sub Topics & SQL Rules, FIFO Sessions, Pros & Cons, Azure CLI/Portal steps.
 * 💡 **Real-World Demonstration**: [`azure_service_bus/azure_service_bus_real_world_demo.md`](azure_service_bus/azure_service_bus_real_world_demo.md)
@@ -58,7 +70,7 @@ Welcome to the **Master Architecture & Real-World Reference Notes for Azure Micr
 
 ---
 
-### 4. 📦 Azure Container Registry (ACR)
+### 5. 📦 [Azure Container Registry (ACR)](azure_container_registry/azure_container_registry_master_notes.md)
 * 📖 **Master Notes**: [`azure_container_registry/azure_container_registry_master_notes.md`](azure_container_registry/azure_container_registry_master_notes.md)
   * Private OCI Repositories, Passwordless Managed Identity (`AcrPull`), Cloud-Native Builds (`az acr build`), Webhooks, Microsoft Defender Scanning, Pros & Cons, Azure CLI/Portal steps.
 * 💡 **Real-World Demonstration**: [`azure_container_registry/azure_container_registry_real_world_demo.md`](azure_container_registry/azure_container_registry_real_world_demo.md)
@@ -67,10 +79,11 @@ Welcome to the **Master Architecture & Real-World Reference Notes for Azure Micr
 
 ---
 
-## 📑 Microservices Comparison Matrix
+## 📑 Complete Azure AI Platform Matrix
 
-| Microservice Pillar | Primary Architectural Role | Scale Mechanism | Key Advantage for AI Systems |
+| Service Pillar | Primary Architectural Role | Scale Mechanism | Key Advantage for AI Systems |
 | :--- | :--- | :--- | :--- |
+| **Azure AI Agents** | Autonomous multi-agent reasoning, tool execution & supervisor hand-offs | Dynamic Task Delegation (ReAct / Swarm) | Solves open-ended, complex workflows without hardcoded logic chains |
 | **Azure Container Apps (ACA)** | Long-running microservices, APIs & LLM Inference Workers | KEDA (0 to N Replicas based on HTTP / Queue Depth) | Serverless container execution with zero-cost idle scaling |
 | **Azure Functions** | Short-lived, event-driven pipelines & cron triggers | Event-Driven Elastic Scale (Pre-warmed instances) | Instant event execution on Blob/Service Bus events with 0 boilerplate |
 | **Azure Service Bus** | Asynchronous messaging, rate-limit buffer & agent pub/sub | Managed PaaS Infrastructure (Millions of msgs/sec) | Decouples web apps from LLMs, protects against HTTP 429 rate limits |
