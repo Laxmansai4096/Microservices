@@ -34,12 +34,16 @@ Welcome to the **Master Architecture, Infrastructure & Multi-Agent Reference Not
 ## 📂 Master Navigation Directory
 
 ### 1. 🤖 [Azure AI Agents & Multi-Agent Orchestration](azure_ai_agents/azure_ai_agents_master_notes.md)
-* 📖 **Master Notes**: [`azure_ai_agents/azure_ai_agents_master_notes.md`](azure_ai_agents/azure_ai_agents_master_notes.md)
-  * Tool Calling, ACA Dynamic Sessions (Code Sandbox), Swarm & Hierarchical Multi-Agent Orchestration, Human-in-the-Loop, Memory, Pros & Cons.
+* 📖 **Master Capabilities & Architecture Guide**: [`azure_ai_agents/azure_agents_capabilities_complete_guide.md`](azure_ai_agents/azure_agents_capabilities_complete_guide.md)
+  * `az login` authentication, Tool Calling, Multi-database connectivity (SQL + Cosmos DB + Search), Agent-to-Agent (A2A) orchestration.
+* 📖 **Foundational Notes**: [`azure_ai_agents/azure_ai_agents_master_notes.md`](azure_ai_agents/azure_ai_agents_master_notes.md)
+  * Dynamic Sessions (Code Sandbox), Swarms & Hierarchical Multi-Agent Orchestration, Human-in-the-Loop, Memory, Pros & Cons.
 * 💡 **Real-World Demonstration**: [`azure_ai_agents/azure_ai_agents_real_world_demo.md`](azure_ai_agents/azure_ai_agents_real_world_demo.md)
   * *Analogy*: The Hospital Surgical Care Team 👨‍⚕️🩺
   * *High-Scale Scenario*: 1,000 Concurrent Corporate Loan Applications Audited Autonomously with VP Approval Gate.
-* 🐍 **Runnable Pipeline Simulation**: [`azure_ai_agents/multi_agent_pipeline_demo.py`](azure_ai_agents/multi_agent_pipeline_demo.py)
+* 🚀 **Live Working Azure AI Multi-Agent Application**: [`azure_ai_agents/live_azure_agent_ecosystem.py`](azure_ai_agents/live_azure_agent_ecosystem.py)
+  * Real-time live execution via active Azure deployment (`gpt-5-mini` in `rg-explore-ai`), executing SQL DB queries, Cosmos DB NoSQL queries, policy search, and A2A supervisor delegation.
+* 🐍 **Simulated Pipeline**: [`azure_ai_agents/multi_agent_pipeline_demo.py`](azure_ai_agents/multi_agent_pipeline_demo.py)
 
 ---
 
