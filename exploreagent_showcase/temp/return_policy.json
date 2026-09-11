@@ -1,0 +1,18 @@
+{
+  "policy_name": "Enterprise Return and Exchange Policy",
+  "vip_rules": {
+    "tier": "VIP_PLATINUM",
+    "return_window_days": 60,
+    "restocking_fee_pct": 0,
+    "free_expedited_freight": true,
+    "exchange_upgrade_allowed": true
+  },
+  "standard_rules": {
+    "tier": "STANDARD",
+    "return_window_days": 14,
+    "restocking_fee_pct": 15,
+    "free_expedited_freight": false,
+    "exchange_upgrade_allowed": false
+  },
+  "hazmat_rule": "Items over 15.0 kg require certified freight carrier."
+}

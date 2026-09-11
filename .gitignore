@@ -7,6 +7,7 @@ acr_ai_demo/
 # Ignore Python scripts and virtual environments
 *.py
 !azure_ai_agents/*.py
+!exploreagent_showcase/*.py
 __pycache__/
 *.py[cod]
 .venv/
